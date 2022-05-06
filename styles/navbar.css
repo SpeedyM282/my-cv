@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #1D262D;
+  ;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  color: #F8F0E4;
+  font-size: 21px;
+  margin: auto;
+}
+
+nav,
+main,
+footer {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+section {
+  margin: 5%;
+  border-radius: 19px;
+  padding: 1%;
+}
+
+a {
+  color: #adadad;
+  transition: .5s;
+}
+
+a:hover {
+  color: #E12179;
+}
+
+header {
+  background-color: #1D262D;
+  position: fixed;
+  display: flex;
+  width: 100%;
+  top: 0;
+  justify-content: flex-end;
+  height: 70px;
+  margin-bottom: 27px;
+}
+
+.hamburger {
+  display: none;
+}
+
+.navbar {
+  flex-basis: 1200px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar-ul {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  align-items: center;
+}
+
+.navbar-item>a {
+  cursor: pointer;
+  font-weight: 500;
+  color: #F8F0E4;
+  font-size: 19px;
+}
+
+.nav-links {
+  position: relative;
+  text-decoration: none;
+}
+
+.nav-links::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  background: #E12179;
+  bottom: 0;
+  right: 0;
+  top: 23px;
+  transition: all 0.37s linear;
+}
+
+.nav-links:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+a:hover {
+  transition: 0.5s;
+}
+
+
+/*----------------# Media Queries For Tablets and Phones #----------------*/
+
+@media (min-width: 250px) and (max-width: 1250px) {
+  .navbar {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+    width: 50px;
+    height: 50px;
+  }
+
+  .hamburger:hover {
+    opacity: 0.5;
+    cursor: pointer;
+  }
+}
